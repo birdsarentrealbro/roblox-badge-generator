@@ -10,7 +10,7 @@ app.use(cors()); // Enable CORS for all origins
 app.get('/badge/:id', async (req, res) => {
   const badgeId = req.params.id;
   try {
-    const response = await fetch(`https://badges.roblox.com/v1/badges/${badgeId}`);
+    const response = await fetch(`https://cors-anywhere.com/badges.roblox.com/v1/badges/${badgeId}`);
     const data = await response.json();
     res.json(data);
   } catch (e) {
